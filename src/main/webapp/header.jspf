@@ -1,0 +1,24 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<%
+
+    Integer count = (Integer) application.getAttribute("count");
+
+    // S'il n'existe pas encore, le démarrer à 0
+    if (count == null) {
+        count = 0;
+    }
+
+    // Incrémenter le compteur
+    count++;
+
+    // Sauvegarder la nouvelle valeur
+    application.setAttribute("count", count);
+%>
+
+
+<div style="background-color:#cce5ff; padding:10px; border-radius:8px;">
+    <h2>BBR HEADER</h2>
+    <p>Compteur d’affichage des pages : <b><%= count %></b></p>
+    <hr>
+</div>
